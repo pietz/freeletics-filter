@@ -1,253 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-		<meta charset="utf-8">
-		<title>Freeletics Filter</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/styles.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	</head>
 
+<head>
+    <meta charset="UTF-8">
+    <title>Freeletics Filter</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-yellow.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-	<body>
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <div class="btn-group">
-                <button class="option btn" data-group=".burpees">Burpees</button>
-                <button class="option btn" data-group=".climbers">Climbers</button>
-                <button class="option btn" data-group=".hs-pushups">HS PushUps</button>
-                <button class="option btn" data-group=".jacks">Jumping Jacks</button>
-                <button class="option btn" data-group=".jumps">Jumps</button>
-                <button class="option btn" data-group=".levers">Leg Levers</button>
-                <button class="option btn" data-group=".lunges">Lunges</button>
-                <button class="option btn" data-group=".pullups">PullUps</button>
-                <button class="option btn" data-group=".pushups">PushUps</button>
-                <button class="option btn" data-group=".running">Running</button>
-                <button class="option btn" data-group=".situps">SitUps</button>
-                <button class="option btn" data-group=".squats">Squats</button>
-                <button class="option btn" data-group=".standups">StandUps</button>
-              </div>
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+
+        <!-- Header -->
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <span class="mdl-layout-title">Freeletics Filter</span>
             </div>
-          </div>
-        </div>
-      </div>
+        </header>
 
-      <div class="row grid">
-        <div class="col-lg-3 col-md-4 col-sm-6 burpees squats situps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>APHRODITE</h3>
-          </div>
+        <!-- Sidebar -->
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Filter Options</span>
+            <div class="option-list">
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-burpees">
+                    <input type="checkbox" id="switch-burpees" class="mdl-switch__input" data-group=".burpees">
+                    <span class="mdl-switch__label">Burpees</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch" for="switch-pushups">
+                    <input type="checkbox" id="switch-pushups" class="mdl-switch__input" data-group=".pushups">
+                    <span class="mdl-switch__label">PushUps</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-pullups">
+                    <input type="checkbox" id="switch-pullups" class="mdl-switch__input" data-group=".pullups">
+                    <span class="mdl-switch__label">PullUps</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-situps">
+                    <input type="checkbox" id="switch-situps" class="mdl-switch__input" data-group=".situps">
+                    <span class="mdl-switch__label">SitUps</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-squats">
+                    <input type="checkbox" id="switch-squats" class="mdl-switch__input" data-group=".squats">
+                    <span class="mdl-switch__label">Squats</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-climbers">
+                    <input type="checkbox" id="switch-climbers" class="mdl-switch__input" data-group=".climbers">
+                    <span class="mdl-switch__label">Climbers</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-jacks">
+                    <input type="checkbox" id="switch-jacks" class="mdl-switch__input" data-group=".jacks">
+                    <span class="mdl-switch__label">Jumping Jacks</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-jumps">
+                    <input type="checkbox" id="switch-jumps" class="mdl-switch__input" data-group=".jumps">
+                    <span class="mdl-switch__label">Jumps</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-lunges">
+                    <input type="checkbox" id="switch-lunges" class="mdl-switch__input" data-group=".lunges">
+                    <span class="mdl-switch__label">Lunges</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-hs-pushups">
+                    <input type="checkbox" id="switch-hs-pushups" class="mdl-switch__input" data-group=".hs-pushups">
+                    <span class="mdl-switch__label">HS PushUps</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-levers">
+                    <input type="checkbox" id="switch-levers" class="mdl-switch__input" data-group=".levers">
+                    <span class="mdl-switch__label">Leg Levers</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-standups">
+                    <input type="checkbox" id="switch-standups" class="mdl-switch__input" data-group=".standups">
+                    <span class="mdl-switch__label">StandUps</span>
+                </label>
+                <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-running">
+                    <input type="checkbox" id="switch-running" class="mdl-switch__input" data-group=".running">
+                    <span class="mdl-switch__label">Running</span>
+                </label>
+            </div>
         </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 burpees running squats">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>APOLLON</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pullups situps running">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>ARES</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 burpees pullups pushups squats">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>ARTEMIS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 climbers situps squats">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>ATHENA</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 running squats burpees climbers levers jumps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>ATLAS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 jacks burpees levers situps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>DIONE</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 jacks climbers jumps standups">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>GAIA</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 burpees pullups pushups running">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>HADES</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 burpees lunges climbers situps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>HELIOS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 jumps running">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>HERA</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 running pushups">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>HERMES</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 hs-pushups squats jumps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>HYPERION</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 running jacks climbers">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>IRIS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 lunges jumps frogs">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>KENTAUROS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pullups squats situps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>KRIOS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pushups squats levers pullups">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>KRONOS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 burpees climbers jumps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>METIS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pushups jacks lunges">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>MORPHEUS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 situps climbers">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>NEMESIS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 situps levers standups">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>NYX</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 lunges burpees levers">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>PERSEPHONE</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pushups pullups">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>POSEIDON</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 climbers pushups situps squats jacks">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>PROMETHEUS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pushups situps climbers standups burpees">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>THANATOS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 hs-pushups pullups pushups">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>TRITON</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 running burpees pullups climbers pushups jumps">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>URANOS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pushups situps squats">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>VENUS</h3>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 hs-pushups pullups pushups situps squats">
-        <div class="panel panel-default">
-          <div class="panel-body">
-            <h3>ZEUS</h3>
-          </div>
-        </div>
-      </div>
-      </div>
+
+        <!-- Content -->
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <div class="mdl-card mdl-shadow--3dp burpees squats situps"><h3>APHRODITE</h3></div>
+                <div class="mdl-card mdl-shadow--3dp burpees running squats"><h3>APOLLON</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pullups situps running"><h3>ARES</h3></div>
+                <div class="mdl-card mdl-shadow--3dp burpees pullups pushups squats"><h3>ARTEMIS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp climbers situps squats"><h3>ATHENA</h3></div>
+                <div class="mdl-card mdl-shadow--3dp running squats burpees climbers levers jumps"><h3>ATLAS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp jacks burpees levers situps"><h3>DIONE</h3></div>
+                <div class="mdl-card mdl-shadow--3dp jacks climbers jumps standups"><h3>GAIA</h3></div>
+                <div class="mdl-card mdl-shadow--3dp burpees pullups pushups running"><h3>HADES</h3></div>
+                <div class="mdl-card mdl-shadow--3dp burpees lunges climbers situps"><h3>HELIOS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp jumps running"><h3>HERA</h3></div>
+                <div class="mdl-card mdl-shadow--3dp running pushups"><h3>HERMES</h3></div>
+                <div class="mdl-card mdl-shadow--3dp hs-pushups squats jumps"><h3>HYPERION</h3></div>
+                <div class="mdl-card mdl-shadow--3dp running jacks climbers"><h3>IRIS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp lunges jumps frogs"><h3>KENTAUROS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pullups squats situps"><h3>KRIOS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pushups squats levers pullups"><h3>KRONOS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp burpees climbers jumps"><h3>METIS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pushups jacks lunges"><h3>MORPHEUS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp situps climbers"><h3>NEMESIS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp situps levers standups"><h3>NYX</h3></div>
+                <div class="mdl-card mdl-shadow--3dp lunges burpees levers"><h3>PERSEPHONE</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pushups pullups"><h3>POSEIDON</h3></div>
+                <div class="mdl-card mdl-shadow--3dp climbers pushups situps squats jacks"><h3>PROMETHEUS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pushups situps climbers standups burpees"><h3>THANATOS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp hs-pushups pullups pushups"><h3>TRITON</h3></div>
+                <div class="mdl-card mdl-shadow--3dp running burpees pullups climbers pushups jumps"><h3>URANOS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp pushups situps squats"><h3>VENUS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp hs-pushups pullups pushups situps squats"><h3>ZEUS</h3></div>
+            </div>
+        </main>
     </div>
-
-
-	<!-- script references -->
-		<script src="js/bootstrap.min.js"></script>
+    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="js/isotope.min.js"></script>
     <script src="js/script.js"></script>
-	</body>
+</body>
+
 </html>
