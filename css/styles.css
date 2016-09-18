@@ -2,19 +2,59 @@ body {
     background-color: #ddd;
 }
 
-.mdl-card__title-text {
-    font-size: 64px;
-}
-
 .mdl-card {
     margin: 10px;
-    padding: 10px;
-    min-height: 10px;
+    padding: 0px;
+    min-height: 160px;
     width: 250px;
 }
 
+.mdl-radio {
+    display: block;
+    margin: 8px 9px;
+}
+
+.mdl-radio__label {
+    margin-left: 19px;
+}
+
+.mdl-layout__header {
+    background: #C9DE32;
+}
+
+.material-icons {
+    color: #E4005B;
+}
+
+.mdl-card__title {
+    padding: 18px;
+}
+
+.mdl-card__supporting-text {
+    padding: 10px;
+}
+
 .mdl-switch {
-    margin-bottom: 24px;
+    margin: 8px 0px;
+}
+
+.mdl-chip {
+    background: #63FFD7;
+}
+
+.mdl-layout__drawer {
+    background: #555;
+    color: #fff;
+    border: none;
+}
+
+.mdl-layout__drawer .mdl-layout-title {
+    border-top: 1px solid #777;
+    line-height: 54px;
+}
+
+.mdl-slider__container {
+    padding: 20px 0px;
 }
 
 .option-list {

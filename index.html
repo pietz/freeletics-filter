@@ -7,7 +7,7 @@
     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
 
-    <title>Freeletics Filter</title>
+    <title>Greek God Selector</title>
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -24,7 +24,7 @@
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-yellow.min.css">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.pink-lime.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -34,12 +34,21 @@
         <!-- Header -->
         <header class="mdl-layout__header">
             <div class="mdl-layout__header-row">
-                <span class="mdl-layout-title">Freeletics Filter</span>
+                <span class="mdl-layout-title">Freeletics</span>
+                <div class="mdl-layout-spacer"></div>
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+          <i class="material-icons">info_outline</i>
+        </label>
             </div>
         </header>
 
         <!-- Sidebar -->
         <div class="mdl-layout__drawer">
+
+            <span class="mdl-layout-title">Duration</span>
+                <!-- Slider with Starting Value -->
+                <input class="mdl-slider mdl-js-slider" type="range" min="0" max="60" value="50" tabindex="0">
+
             <span class="mdl-layout-title">Exercises</span>
             <div class="option-list">
                 <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-burpees">
@@ -95,6 +104,7 @@
                     <span class="mdl-switch__label">Running</span>
                 </label>
             </div>
+
             <span class="mdl-layout-title">Options</span>
             <div class="option-list">
                 <label class="mdl-switch mdl-js-switch mdl-js-ripple-effect" for="switch-no-running">
@@ -107,35 +117,441 @@
         <!-- Content -->
         <main class="mdl-layout__content">
             <div class="page-content">
-                <div class="mdl-card mdl-shadow--3dp burpees squats situps"><h3>APHRODITE</h3></div>
-                <div class="mdl-card mdl-shadow--3dp burpees running squats"><h3>APOLLON</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pullups situps running"><h3>ARES</h3></div>
-                <div class="mdl-card mdl-shadow--3dp burpees pullups pushups squats"><h3>ARTEMIS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp climbers situps squats"><h3>ATHENA</h3></div>
-                <div class="mdl-card mdl-shadow--3dp running squats burpees climbers levers jumps"><h3>ATLAS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp jacks burpees levers situps"><h3>DIONE</h3></div>
-                <div class="mdl-card mdl-shadow--3dp jacks climbers jumps standups"><h3>GAIA</h3></div>
-                <div class="mdl-card mdl-shadow--3dp burpees pullups pushups running"><h3>HADES</h3></div>
-                <div class="mdl-card mdl-shadow--3dp burpees lunges climbers situps"><h3>HELIOS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp jumps running"><h3>HERA</h3></div>
-                <div class="mdl-card mdl-shadow--3dp running pushups"><h3>HERMES</h3></div>
-                <div class="mdl-card mdl-shadow--3dp hs-pushups squats jumps"><h3>HYPERION</h3></div>
-                <div class="mdl-card mdl-shadow--3dp running jacks climbers"><h3>IRIS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp lunges jumps frogs"><h3>KENTAUROS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pullups squats situps"><h3>KRIOS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pushups squats levers pullups"><h3>KRONOS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp burpees climbers jumps"><h3>METIS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pushups jacks lunges"><h3>MORPHEUS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp situps climbers"><h3>NEMESIS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp situps levers standups"><h3>NYX</h3></div>
-                <div class="mdl-card mdl-shadow--3dp lunges burpees levers"><h3>PERSEPHONE</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pushups pullups"><h3>POSEIDON</h3></div>
-                <div class="mdl-card mdl-shadow--3dp climbers pushups situps squats jacks"><h3>PROMETHEUS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pushups situps climbers standups burpees"><h3>THANATOS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp hs-pushups pullups pushups"><h3>TRITON</h3></div>
-                <div class="mdl-card mdl-shadow--3dp running burpees pullups climbers pushups jumps"><h3>URANOS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp pushups situps squats"><h3>VENUS</h3></div>
-                <div class="mdl-card mdl-shadow--3dp hs-pushups pullups pushups situps squats"><h3>ZEUS</h3></div>
+                <div class="mdl-card mdl-shadow--3dp burpees squats situps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Aphrodite</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp burpees running squats">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Apollon</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pullups situps running">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Ares</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp burpees pullups pushups squats">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Artemis</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp climbers situps squats">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Athena</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp running squats burpees climbers levers jumps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Atlas</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp jacks burpees levers situps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Dione</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp jacks climbers jumps standups">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Gaia</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp burpees pullups pushups running">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Hades</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp burpees lunges climbers situps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Helios</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp jumps running">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Hera</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp running pushups">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Hermes</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp hs-pushups squats jumps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Hyperion</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp running jacks climbers">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Iris</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp lunges jumps frogs">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Kentauros</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pullups squats situps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Krios</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pushups squats levers pullups">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Kronos</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp burpees climbers jumps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Metis</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pushups jacks lunges">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Morpheus</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp situps climbers">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Nemesis</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp situps levers standups">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Nyx</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp lunges burpees levers">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Persephone</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pushups pullups">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Poseidon</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp climbers pushups situps squats jacks">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Prometheus</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pushups situps climbers standups burpees">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Thanatos</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp hs-pushups pullups pushups">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Triton</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp running burpees pullups climbers pushups jumps">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Uranos</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp pushups situps squats">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Venus</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
+                <div class="mdl-card mdl-shadow--3dp hs-pushups pullups pushups situps squats">
+                    <div class="mdl-card__title">
+                        <h4 class="mdl-card__title-text">Zeus</h4>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <div class="mdl-card__supporting-text">
+                            PushUps, PullUps, Squats, Running
+                        </div>
+                    </div>
+                    <div class="mdl-card__menu">
+                        <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
+                            <i class="material-icons">fitness_center</i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
