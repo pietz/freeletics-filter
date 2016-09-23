@@ -2,10 +2,20 @@ body {
     background-color: #ddd;
 }
 
+#sliderOutput {
+    margin-top: 8px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.mdl-dialog {
+    width: 480px;
+}
+
 .mdl-card {
     margin: 10px;
     padding: 0px;
-    min-height: 160px;
+    min-height: 140px;
     width: 250px;
 }
 
@@ -16,14 +26,6 @@ body {
 
 .mdl-radio__label {
     margin-left: 19px;
-}
-
-.mdl-layout__header {
-    background: #C9DE32;
-}
-
-.material-icons {
-    color: #E4005B;
 }
 
 .mdl-card__title {
@@ -39,7 +41,7 @@ body {
 }
 
 .mdl-chip {
-    background: #63FFD7;
+    background: #C9DE32;
 }
 
 .mdl-layout__drawer {
@@ -51,10 +53,6 @@ body {
 .mdl-layout__drawer .mdl-layout-title {
     border-top: 1px solid #777;
     line-height: 54px;
-}
-
-.mdl-slider__container {
-    padding: 20px 0px;
 }
 
 .option-list {

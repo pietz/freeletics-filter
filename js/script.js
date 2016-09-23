@@ -1,59 +1,41 @@
-//var grid = '.grid';             // Wrapper around the results
-//var option = '.option';         // Filter Option Element
-//var active = 'btn-warning';     // Will be added to the active element
-//var attr = 'data-group';        // Name of the Attribute containing the filter tags
+$(document).ready(function(){
 
-var grid = '.page-content';             // Wrapper around the results
-var option = '.mdl-switch__input';         // Filter Option Element
-var active = 'active';     // Will be added to the active element
-var attr = 'data-group';        // Name of the Attribute containing the filter tags
+    var grid = $('.page-content');
+    var options = $('.mdl-switch__input');
+    var attribute = 'data-group';
+    
+    grid.isotope();
 
-$(grid).isotope({});            // Initializes Isotope
-
-// Click Handler
-var $filters = [];
-$(option).click(function(){
-    if ($(this).hasClass(active)) {
-        $(this).removeClass(active);
-        $filters = removeByName($filters, $(this).attr(attr));
-    } else {
-        $(this).addClass(active);
-        $filters.push($(this).attr(attr));
+    function executeFilter() {
+        var filters = [];
+        options.filter(':checked').each(function(){
+            filters.push($(this).attr(attribute));
+        })
+        filters.push('.p' + $("#slider").val().toString().charAt(0));
+        filters = filters.join().split(',').join('');
+        console.log(filters);
+        grid.isotope({filter: filters});
     }
-    $(grid).isotope({filter: $filters.join().split(',').join('')});
-});
 
-// Removes an Elements by Value
-function removeByName(arr) {
-    var what, a = arguments, L = a.length, ax;
-    while (L > 1 && arr.length) {
-        what = a[--L];
-        while ((ax= arr.indexOf(what)) !== -1) {
-            arr.splice(ax, 1);
-        }
+    options.change(function(){
+        executeFilter();
+    });
+
+    $('#slider').on("input change", function(){
+        $('#sliderOutput').text("Max Points: " + $('#slider').val());
+        executeFilter();
+    });
+
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
     }
-    return arr;
-};
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
 
-/*
-$(option).click(function(){
-    $(option).removeClass(active);
-    $(this).addClass(active);
-    $(grid).isotope({filter: $(this).attr(attr)});
-});
-*/
-
-/*
-var $filters = [];
-$(option).click(function(){
-    console.log("jipp");
-    if ($(this).hasClass(active)) {
-        $(this).removeClass(active);
-        $filters = removeByName($filters, $(this).attr(attr));
-    } else {
-        $(this).addClass(active);
-        $filters.push($(this).attr(attr));
-    }
-    $(grid).isotope({filter: $filters.join().split(',').join('')});
-});
-*/
+})
